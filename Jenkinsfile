@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'maven:3.8.6-openjdk-17'  // גרסת Maven ו-JDK שתבחרי
+            args '-v $HOME/.m2:/root/.m2'   // מונט קאש של Maven (אופציונלי)
+        }
+    }
 
     parameters {
         string(name: 'REPO_URL', defaultValue: 'https://github.com/sari-kahana/Automation-Appium.git', description: 'Repository URL')
