@@ -39,6 +39,14 @@
             <version>1.18.38</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.11.0</version> <!-- מומלץ להשתמש בגרסה עדכנית -->
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
 </project>
